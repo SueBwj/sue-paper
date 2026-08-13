@@ -1,20 +1,41 @@
 # Sue-Paper
 
-Windows 原生纸张质感工具：在全部屏幕之上叠加程序生成的纸张纹理，让屏幕呈现哑光纸质感。Rust + windows-rs 直调 Win32。
+**让你的屏幕摸起来像纸。**
 
-## 功能
+Sue-Paper 在整个屏幕上叠加一层程序生成的纸张纹理，柔化刺眼的高亮与对比度，把发光的屏幕变成一张"数字哑光纸"。Windows 原生，Rust + Win32 直调，单文件免安装。
 
-- 全屏纸张纹理覆盖层（分层窗口：逐像素半透明、鼠标键盘完全穿透、不抢焦点、不进 Alt-Tab）
-- 4 种程序生成纹理（分形值噪声，feTurbulence 风格，512×512 无缝平铺）：
-  Classic Matte / Whisper Weave / Sunbaked Parchment / Vellum Mist
-- 强度调节 15% / 20% / 25% / 30%
-- 系统托盘菜单：开关、纹理、强度、打盹（5/15 分钟）、排除当前前台应用、退出
-- 内嵌 `S` 纸张纹理 Logo，无需随程序分发外部图标文件
-- 应用排除列表：前台应用命中时自动隐藏纹理（500ms 轮询）
-- 多显示器支持（`EnumDisplayMonitors` + `WM_DISPLAYCHANGE` 自动重建）
-- 前台窗口事件监听、Z 序恢复、无闪烁覆盖层重建与单实例保护，避免切换 Electron 应用、显示变化或重复启动导致亮度跳变
-- 设置持久化：`%APPDATA%/Sue-Paper/settings.json`（首次启动自动迁移旧配置）
-- 资源占用：内存约 22–27 MB，运行时 0% CPU（静态纹理，仅切换时更新一次）
+![开启前后对比](showcase/compare.png)
+
+## 工作原理
+
+轻量，且绝不碍事。
+
+- **一层看不见的纸。** 覆盖层运行在所有窗口之上、每一块屏幕。鼠标和键盘直接穿透，不抢焦点，不进 Alt-Tab——你感觉不到它，只看到纸。
+- **挑一种纸。** 4 种程序生成纹理（分形噪声、无缝平铺，任意分辨率下颗粒都清晰），强度 15% / 20% / 25% / 30% 四档可调。
+- **它会自己让开。** 把看图、剪片、修图的应用加进排除列表，它们来到前台时纹理自动隐藏；也可以"打盹" 5 / 15 分钟，随时要回一块干净的屏幕。
+
+## 四种纹理
+
+![四种纹理](showcase/textures.png)
+
+| 纹理 | 气质 |
+|---|---|
+| Classic Matte | 干净柔和的哑光面，适合专注阅读 |
+| Whisper Weave | 细腻织物纹理，柔化亮色应用 |
+| Sunbaked Parchment | 暖琥珀色厚颗粒，适合夜晚写作 |
+| Vellum Mist | 半透明薄雾，适合长时间阅读 |
+
+## 全屏效果
+
+![全屏效果](showcase/screenshot.png)
+
+## 下载与使用
+
+从 [Releases](https://github.com/SueBwj/sue-paper/releases) 下载 zip，解压后运行 `sue-paper.exe` 即可。
+
+一切操作都在系统托盘右键菜单里：开关、纹理、强度、打盹、排除当前前台应用、退出。设置自动保存在 `%APPDATA%/Sue-Paper/settings.json`。
+
+资源占用：内存约 22–27 MB，运行时 0% CPU（静态纹理，仅切换时更新一次）。支持多显示器，显示变化时自动重建覆盖层。
 
 ## 构建
 
@@ -53,6 +74,11 @@ cargo test --all-targets
 | `assets/logo-s-64.bgra` | 编译期内嵌的托盘图标像素资源 |
 | `assets/sue-paper.ico` | 文件管理器与开始菜单使用的多尺寸 Windows 图标 |
 | `src/bin/embed_icon.rs` | 将 ICO 写入 release EXE 的资源工具 |
+
+## 致谢与说明
+
+- 灵感来自 [Paperman](https://paperman.cc) —— 数字哑光表面的开创者。
+- 本项目是 **Vibe Coding** 的产物：从想法到上线的全部代码由人类与 AI 编程助手协作完成，凭感觉快速迭代，边用边改。
 
 ## 未实现（可作为后续迭代）
 
