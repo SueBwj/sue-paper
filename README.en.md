@@ -6,7 +6,11 @@
 
 Sue-Paper lays a procedurally generated paper texture over your entire screen, softening harsh highlights and contrast — turning your emissive display into a "digital matte paper". Native Windows, built with Rust + raw Win32, single-file and portable.
 
-![Before / After](showcase/compare.png)
+<p align="center">
+  <img src="assets/showcase1.png" width="32%" alt="Reading showcase 1">
+  <img src="assets/showcase2.png" width="32%" alt="Reading showcase 2">
+  <img src="assets/showcase3.png" width="32%" alt="Reading showcase 3">
+</p>
 
 ## How It Works
 
@@ -26,20 +30,6 @@ Lightweight, and designed to stay out of your way.
 | Whisper Weave | A delicate fabric grain that softens bright apps |
 | Sunbaked Parchment | A warm amber, heavy grain — for late-night writing |
 | Vellum Mist | A translucent haze — for long reading sessions |
-
-## Showcase
-
-Reading: the paper texture turns a stark white page into a warm matte surface —
-
-<p align="center">
-  <img src="assets/showcase1.png" width="32%" alt="Reading showcase 1">
-  <img src="assets/showcase2.png" width="32%" alt="Reading showcase 2">
-  <img src="assets/showcase3.png" width="32%" alt="Reading showcase 3">
-</p>
-
-It works just as well in dark scenarios (e.g. code editors), visibly softening highlights and contrast:
-
-![Dark scenario](showcase/screenshot.png)
 
 ## Download & Usage
 

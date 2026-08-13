@@ -6,7 +6,11 @@
 
 Sue-Paper 在整个屏幕上叠加一层程序生成的纸张纹理，柔化刺眼的高亮与对比度，把发光的屏幕变成一张"数字哑光纸"。Windows 原生，Rust + Win32 直调，单文件免安装。
 
-![开启前后对比](showcase/compare.png)
+<p align="center">
+  <img src="assets/showcase1.png" width="32%" alt="阅读效果 1">
+  <img src="assets/showcase2.png" width="32%" alt="阅读效果 2">
+  <img src="assets/showcase3.png" width="32%" alt="阅读效果 3">
+</p>
 
 ## 工作原理
 
@@ -26,20 +30,6 @@ Sue-Paper 在整个屏幕上叠加一层程序生成的纸张纹理，柔化刺�
 | Whisper Weave | 细腻织物纹理，柔化亮色应用 |
 | Sunbaked Parchment | 暖琥珀色厚颗粒，适合夜晚写作 |
 | Vellum Mist | 半透明薄雾，适合长时间阅读 |
-
-## 实际效果
-
-阅读场景：纸张纹理让白底页面变成温润的哑光纸面——
-
-<p align="center">
-  <img src="assets/showcase1.png" width="32%" alt="阅读效果 1">
-  <img src="assets/showcase2.png" width="32%" alt="阅读效果 2">
-  <img src="assets/showcase3.png" width="32%" alt="阅读效果 3">
-</p>
-
-深色场景（代码编辑器）下同样有效，高光与对比度被明显柔化：
-
-![深色场景](showcase/screenshot.png)
 
 ## 下载与使用
 
