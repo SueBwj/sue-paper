@@ -1,5 +1,7 @@
 # Sue-Paper
 
+**中文** | [English](README.en.md)
+
 **让你的屏幕摸起来像纸。**
 
 Sue-Paper 在整个屏幕上叠加一层程序生成的纸张纹理，柔化刺眼的高亮与对比度，把发光的屏幕变成一张"数字哑光纸"。Windows 原生，Rust + Win32 直调，单文件免安装。
@@ -29,7 +31,11 @@ Sue-Paper 在整个屏幕上叠加一层程序生成的纸张纹理，柔化刺�
 
 阅读场景：纸张纹理让白底页面变成温润的哑光纸面——
 
-![阅读效果](assets/showcase1.png)
+<p align="center">
+  <img src="assets/showcase1.png" width="32%" alt="阅读效果 1">
+  <img src="assets/showcase2.png" width="32%" alt="阅读效果 2">
+  <img src="assets/showcase3.png" width="32%" alt="阅读效果 3">
+</p>
 
 深色场景（代码编辑器）下同样有效，高光与对比度被明显柔化：
 
