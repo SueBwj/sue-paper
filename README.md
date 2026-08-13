@@ -25,9 +25,15 @@ Sue-Paper 在整个屏幕上叠加一层程序生成的纸张纹理，柔化刺�
 | Sunbaked Parchment | 暖琥珀色厚颗粒，适合夜晚写作 |
 | Vellum Mist | 半透明薄雾，适合长时间阅读 |
 
-## 全屏效果
+## 实际效果
 
-![全屏效果](showcase/screenshot.png)
+阅读场景：纸张纹理让白底页面变成温润的哑光纸面——
+
+![阅读效果](assets/showcase1.png)
+
+深色场景（代码编辑器）下同样有效，高光与对比度被明显柔化：
+
+![深色场景](showcase/screenshot.png)
 
 ## 下载与使用
 
